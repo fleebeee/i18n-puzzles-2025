@@ -21,12 +21,6 @@ fn has_at_least_one_digit(password: &str) -> bool {
     false
 }
 
-// a length of at least 4 and at most 12
-// at least one digit
-// at least one uppercase letter (with or without accents, examples: A or Ż)
-// at least one lowercase letter (with or without accents, examples: a or ŷ)
-// at least one character that is outside the standard 7-bit ASCII character set (examples: Ű, ù or ř)
-
 fn has_at_least_one_uppercase(password: &str) -> bool {
     for grapheme in password.graphemes(true) {
         let base_char = grapheme.nfd().next().unwrap();
@@ -64,36 +58,6 @@ fn has_at_least_one_non_ascii(password: &str) -> bool {
 }
 
 fn is_valid(password: &str) -> bool {
-    // print!("{password}: ");
-
-    // if !has_valid_length(password) {
-    //     println!("invalid length");
-    //     return false;
-    // }
-
-    // if !has_at_least_one_digit(password) {
-    //     println!("no digits");
-    //     return false;
-    // }
-
-    // if !has_at_least_one_uppercase(password) {
-    //     println!("no uppercase letters");
-    //     return false;
-    // }
-
-    // if !has_at_least_one_lowercase(password) {
-    //     println!("no lowercase letters");
-    //     return false;
-    // }
-
-    // if !has_at_least_one_non_ascii(password) {
-    //     println!("no non-ascii letters");
-    //     return false;
-    // }
-
-    // println!("valid");
-    // true
-
     has_valid_length(password)
         && has_at_least_one_digit(password)
         && has_at_least_one_uppercase(password)
