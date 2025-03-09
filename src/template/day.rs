@@ -14,7 +14,7 @@ const SERVER_UTC_OFFSET: i32 = -5;
 /// This value displays as a two digit number.
 ///
 /// ```
-/// # use advent_of_code::Day;
+/// # use i18n_puzzles::Day;
 /// let day = Day::new(8).unwrap();
 /// assert_eq!(day.to_string(), "08")
 /// ```

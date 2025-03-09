@@ -16,8 +16,8 @@
                     // want to debug one file regardless of the active file in
                     // the editor.
                     "--bin=${fileBasenameNoExtension}",
-                    "--package=advent_of_code"
-                ],
+                    "--package=i18n_puzzles"
+                ]
             },
             "args": [],
             "cwd": "${workspaceFolder}"
@@ -33,25 +33,25 @@
                     // want to debug one file regardless of the active file in
                     // the editor
                     "--bin=${fileBasenameNoExtension}",
-                    "--package=advent_of_code"
-                ],
+                    "--package=i18n_puzzles"
+                ]
             },
             "cwd": "${workspaceFolder}"
         },
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug unit tests in library 'advent_of_code'",
+            "name": "Debug unit tests in library 'i18n_puzzles'",
             "cargo": {
                 "args": [
                     "test",
                     "--no-run",
                     "--lib",
                     "--features=test_lib",
-                    "--package=advent_of_code"
+                    "--package=i18n_puzzles"
                 ],
                 "filter": {
-                    "name": "advent_of_code",
+                    "name": "i18n_puzzles",
                     "kind": "lib"
                 }
             },

@@ -1,6 +1,6 @@
 use std::{env, fs};
 
-pub mod aoc_cli;
+// pub mod aoc_cli;
 pub mod commands;
 pub mod runner;
 

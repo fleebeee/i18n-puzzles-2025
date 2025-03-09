@@ -1,32 +1,32 @@
-use advent_of_code::template::commands::{all, download, read, scaffold, solve, time};
 use args::{parse, AppArguments};
+use i18n_puzzles::template::commands::{all, /* download,  read ,*/ scaffold, solve, time};
 
 #[cfg(feature = "today")]
-use advent_of_code::template::Day;
+use i18n_puzzles::template::Day;
 #[cfg(feature = "today")]
 use std::process;
 
 mod args {
-    use advent_of_code::template::Day;
+    use i18n_puzzles::template::Day;
     use std::process;
 
     pub enum AppArguments {
-        Download {
-            day: Day,
-        },
-        Read {
-            day: Day,
-        },
+        // Download {
+        //     day: Day,
+        // },
+        // Read {
+        //     day: Day,
+        // },
         Scaffold {
             day: Day,
-            download: bool,
+            // download: bool,
             overwrite: bool,
         },
         Solve {
             day: Day,
             release: bool,
             dhat: bool,
-            submit: Option<u8>,
+            // submit: Option<u8>,
         },
         All {
             release: bool,
@@ -57,21 +57,21 @@ mod args {
                     store,
                 }
             }
-            Some("download") => AppArguments::Download {
-                day: args.free_from_str()?,
-            },
-            Some("read") => AppArguments::Read {
-                day: args.free_from_str()?,
-            },
+            // Some("download") => AppArguments::Download {
+            //     day: args.free_from_str()?,
+            // },
+            // Some("read") => AppArguments::Read {
+            //     day: args.free_from_str()?,
+            // },
             Some("scaffold") => AppArguments::Scaffold {
                 day: args.free_from_str()?,
-                download: args.contains("--download"),
+                // download: args.contains("--download"),
                 overwrite: args.contains("--overwrite"),
             },
             Some("solve") => AppArguments::Solve {
                 day: args.free_from_str()?,
                 release: args.contains("--release"),
-                submit: args.opt_value_from_str("--submit")?,
+                // submit: args.opt_value_from_str("--submit")?,
                 dhat: args.contains("--dhat"),
             },
             #[cfg(feature = "today")]
@@ -104,24 +104,24 @@ fn main() {
         Ok(args) => match args {
             AppArguments::All { release } => all::handle(release),
             AppArguments::Time { day, all, store } => time::handle(day, all, store),
-            AppArguments::Download { day } => download::handle(day),
-            AppArguments::Read { day } => read::handle(day),
+            // AppArguments::Download { day } => download::handle(day),
+            // AppArguments::Read { day } => read::handle(day),
             AppArguments::Scaffold {
                 day,
-                download,
+                // download,
                 overwrite,
             } => {
                 scaffold::handle(day, overwrite);
-                if download {
-                    download::handle(day);
-                }
+                // if download {
+                //     download::handle(day);
+                // }
             }
             AppArguments::Solve {
                 day,
                 release,
                 dhat,
-                submit,
-            } => solve::handle(day, release, dhat, submit),
+                // submit,
+            } => solve::handle(day, release, dhat /*, submit */),
             #[cfg(feature = "today")]
             AppArguments::Today => {
                 match Day::today() {
