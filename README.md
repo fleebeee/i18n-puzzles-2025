@@ -11,10 +11,11 @@ Solutions for [i18n puzzles](https://i18n-puzzles.com/) in [Rust](https://www.ru
 
 | Day | Part 1 | Part 2 |
 | :---: | :---: | :---:  |
-| [Day 1](./src/bin/01.rs) | `14.4ms` | `-` |
-| [Day 2](./src/bin/02.rs) | `121.7µs` | `-` |
+| [Day 1](./src/bin/01.rs) | `14.6ms` | `-` |
+| [Day 2](./src/bin/02.rs) | `120.5µs` | `-` |
+| [Day 3](./src/bin/03.rs) | `714.0µs` | `-` |
 
-**Total: 14.52ms**
+**Total: 15.43ms**
 <!--- benchmarking table --->
 
 ---
