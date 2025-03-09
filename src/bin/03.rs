@@ -1,5 +1,4 @@
 i18n_puzzles::solution!(3);
-use unicode_normalization::UnicodeNormalization;
 use unicode_segmentation::UnicodeSegmentation;
 
 fn has_valid_length(password: &str) -> bool {
@@ -23,7 +22,7 @@ fn has_at_least_one_digit(password: &str) -> bool {
 
 fn has_at_least_one_uppercase(password: &str) -> bool {
     for grapheme in password.graphemes(true) {
-        let base_char = grapheme.nfd().next().unwrap();
+        let base_char = grapheme.chars().next().unwrap();
         if base_char.is_ascii_uppercase() {
             return true;
         }
@@ -34,7 +33,7 @@ fn has_at_least_one_uppercase(password: &str) -> bool {
 
 fn has_at_least_one_lowercase(password: &str) -> bool {
     for grapheme in password.graphemes(true) {
-        let base_char = grapheme.nfd().next().unwrap();
+        let base_char = grapheme.chars().next().unwrap();
         if base_char.is_ascii_lowercase() {
             return true;
         }
