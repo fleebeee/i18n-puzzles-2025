@@ -1,0 +1,26 @@
+i18n_puzzles::solution!(6);
+
+pub fn part_one(input: &str) -> Option<u64> {
+    None
+}
+
+pub fn part_two(_input: &str) -> Option<u64> {
+    None
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_part_one() {
+        let result = part_one(&i18n_puzzles::template::read_file("examples", DAY));
+        assert_eq!(result, None);
+    }
+
+    #[test]
+    fn test_part_two() {
+        let result = part_two(&i18n_puzzles::template::read_file("examples", DAY));
+        assert_eq!(result, None);
+    }
+}
