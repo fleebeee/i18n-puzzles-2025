@@ -1,5 +1,4 @@
 i18n_puzzles::solution!(1);
-use unicode_segmentation::UnicodeSegmentation;
 
 pub fn part_one(input: &str) -> Option<u64> {
     let result = input
@@ -7,7 +6,7 @@ pub fn part_one(input: &str) -> Option<u64> {
         .into_iter()
         .map(|line| {
             let bytes = line.as_bytes().len();
-            let characters = line.graphemes(true).count();
+            let characters = line.chars().count();
 
             if bytes <= 160 {
                 if characters <= 140 { 13 } else { 11 }
