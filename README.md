@@ -7,15 +7,21 @@ Solutions for [i18n puzzles](https://i18n-puzzles.com/) in [Rust](https://www.ru
 <!--- advent_readme_stars table --->
 
 <!--- benchmarking table --->
+
 ## Benchmarks
 
-| Day | Part 1 | Part 2 |
-| :---: | :---: | :---:  |
-| [Day 1](./src/bin/01.rs) | `14.6ms` | `-` |
-| [Day 2](./src/bin/02.rs) | `120.5µs` | `-` |
-| [Day 3](./src/bin/03.rs) | `714.0µs` | `-` |
+|           Day            |  Part 1   | Part 2 |
+| :----------------------: | :-------: | :----: |
+| [Day 1](./src/bin/01.rs) | `14.6ms`  |  `-`   |
+| [Day 2](./src/bin/02.rs) | `121.1µs` |  `-`   |
+| [Day 3](./src/bin/03.rs) | `638.9µs` |  `-`   |
+| [Day 4](./src/bin/04.rs) | `299.9µs` |  `-`   |
+| [Day 5](./src/bin/05.rs) |  `1.2ms`  |  `-`   |
+| [Day 6](./src/bin/06.rs) | `784.0µs` |  `-`   |
+| [Day 7](./src/bin/07.rs) | `773.8µs` |  `-`   |
 
-**Total: 15.43ms**
+**Total: 18.42ms**
+
 <!--- benchmarking table --->
 
 ---
