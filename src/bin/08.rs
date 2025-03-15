@@ -1,4 +1,5 @@
 i18n_puzzles::solution!(8);
+
 use hashbrown::HashSet;
 use unicode_normalization::char::decompose_canonical;
 

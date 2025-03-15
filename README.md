@@ -11,16 +11,17 @@ Solutions for [i18n puzzles](https://i18n-puzzles.com/) in [Rust](https://www.ru
 
 | Day | Part 1 | Part 2 |
 | :---: | :---: | :---:  |
-| [Day 1](./src/bin/01.rs) | `329.5µs` | `-` |
-| [Day 2](./src/bin/02.rs) | `120.2µs` | `-` |
-| [Day 3](./src/bin/03.rs) | `633.6µs` | `-` |
-| [Day 4](./src/bin/04.rs) | `316.2µs` | `-` |
+| [Day 1](./src/bin/01.rs) | `327.3µs` | `-` |
+| [Day 2](./src/bin/02.rs) | `121.8µs` | `-` |
+| [Day 3](./src/bin/03.rs) | `641.8µs` | `-` |
+| [Day 4](./src/bin/04.rs) | `299.5µs` | `-` |
 | [Day 5](./src/bin/05.rs) | `1.2ms` | `-` |
-| [Day 6](./src/bin/06.rs) | `794.7µs` | `-` |
-| [Day 7](./src/bin/07.rs) | `769.8µs` | `-` |
-| [Day 8](./src/bin/08.rs) | `457.4µs` | `-` |
+| [Day 6](./src/bin/06.rs) | `797.7µs` | `-` |
+| [Day 7](./src/bin/07.rs) | `802.3µs` | `-` |
+| [Day 8](./src/bin/08.rs) | `476.6µs` | `-` |
+| [Day 9](./src/bin/09.rs) | `399.5µs` | `-` |
 
-**Total: 4.62ms**
+**Total: 5.07ms**
 <!--- benchmarking table --->
 
 ---
