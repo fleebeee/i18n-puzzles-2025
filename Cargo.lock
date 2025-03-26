@@ -390,6 +390,7 @@ dependencies = [
 name = "i18n_puzzles"
 version = "0.11.0"
 dependencies = [
+ "aho-corasick",
  "bcrypt",
  "chrono",
  "chrono-tz",
