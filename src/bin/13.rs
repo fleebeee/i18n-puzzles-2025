@@ -80,7 +80,7 @@ pub fn part_one(input: &str) -> Option<u64> {
         let candidates = [utf8, utf16_be, utf16_le, latin];
 
         for clue in &clues {
-            for (j, candidate) in candidates.iter().enumerate() {
+            for candidate in &candidates {
                 // Latin decoding works even when we have weird results like Ã¶
                 // luckily these can be filtered out by checking if we end up with uppercase
                 // letters. This feels hacky but I don't know how else to solve this
