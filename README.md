@@ -7,28 +7,27 @@ Solutions for [i18n puzzles](https://i18n-puzzles.com/) in [Rust](https://www.ru
 <!--- advent_readme_stars table --->
 
 <!--- benchmarking table --->
-
 ## Benchmarks
 
-|            Day            |  Part 1   | Part 2 |
-| :-----------------------: | :-------: | :----: |
-| [Day 1](./src/bin/01.rs)  | `347.4µs` |  `-`   |
-| [Day 2](./src/bin/02.rs)  | `122.5µs` |  `-`   |
-| [Day 3](./src/bin/03.rs)  | `635.7µs` |  `-`   |
-| [Day 4](./src/bin/04.rs)  | `325.2µs` |  `-`   |
-| [Day 5](./src/bin/05.rs)  |  `1.2ms`  |  `-`   |
-| [Day 6](./src/bin/06.rs)  | `797.1µs` |  `-`   |
-| [Day 7](./src/bin/07.rs)  | `780.7µs` |  `-`   |
-| [Day 8](./src/bin/08.rs)  | `456.7µs` |  `-`   |
-| [Day 9](./src/bin/09.rs)  | `423.4µs` |  `-`   |
-| [Day 10](./src/bin/10.rs) |  `45.8s`  |  `-`   |
-| [Day 11](./src/bin/11.rs) | `101.7ms` |  `-`   |
-| [Day 12](./src/bin/12.rs) |  `1.7ms`  |  `-`   |
-| [Day 13](./src/bin/13.rs) | `35.9ms`  |  `-`   |
-| [Day 14](./src/bin/14.rs) |  `9.7ms`  |  `-`   |
+| Day | Part 1 | Part 2 |
+| :---: | :---: | :---:  |
+| [Day 1](./src/bin/01.rs) | `347.4µs` | `-` |
+| [Day 2](./src/bin/02.rs) | `122.5µs` | `-` |
+| [Day 3](./src/bin/03.rs) | `635.7µs` | `-` |
+| [Day 4](./src/bin/04.rs) | `325.2µs` | `-` |
+| [Day 5](./src/bin/05.rs) | `1.2ms` | `-` |
+| [Day 6](./src/bin/06.rs) | `797.1µs` | `-` |
+| [Day 7](./src/bin/07.rs) | `780.7µs` | `-` |
+| [Day 8](./src/bin/08.rs) | `456.7µs` | `-` |
+| [Day 9](./src/bin/09.rs) | `423.4µs` | `-` |
+| [Day 10](./src/bin/10.rs) | `45.8s` | `-` |
+| [Day 11](./src/bin/11.rs) | `101.7ms` | `-` |
+| [Day 12](./src/bin/12.rs) | `1.7ms` | `-` |
+| [Day 13](./src/bin/13.rs) | `35.9ms` | `-` |
+| [Day 14](./src/bin/14.rs) | `9.7ms` | `-` |
+| [Day 15](./src/bin/15.rs) | `4.7s` | `-` |
 
-**Total: 45954.09ms**
-
+**Total: 50654.09ms**
 <!--- benchmarking table --->
 
 ---
