@@ -27,12 +27,15 @@ bcrypt = "0.17.0"
 # Template dependencies
 chrono = { version = "0.4.38" }
 chrono-tz = "0.10.1"
+codepage-437 = "0.1.0"
 dateparser = "0.2.1"
 dhat = { version = "0.3.3", optional = true }
 diacritics = "0.2.2"
 encoding = "0.2.33"
+encoding_rs = "0.8.35"
 hashbrown = "0.15.2"
 itertools = "0.14.0"
+pathfinding = "4.14.0"
 pico-args = "0.5.0"
 rayon = "1.10.0"
 regex = "1.11.1"
