@@ -26,8 +26,9 @@ Solutions for [i18n puzzles](https://i18n-puzzles.com/) in [Rust](https://www.ru
 | [Day 13](./src/bin/13.rs) | `35.9ms` | `-` |
 | [Day 14](./src/bin/14.rs) | `9.7ms` | `-` |
 | [Day 15](./src/bin/15.rs) | `4.7s` | `-` |
+| [Day 16](./src/bin/16.rs) | `421.0µs` | `-` |
 
-**Total: 50654.09ms**
+**Total: 50654.51ms**
 <!--- benchmarking table --->
 
 ---
