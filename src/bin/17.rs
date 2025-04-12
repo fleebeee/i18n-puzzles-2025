@@ -28,17 +28,17 @@ struct Piece {
     neighbors: Vec<Neighbor>,
 }
 
-impl Piece {
-    fn print(&self) {
-        for i in 0..self.height {
-            let start = i * self.width;
-            let end = start + self.width;
-            let row = &self.bytes[start..end];
-            // println!("{:08b}", row.last().unwrap());
-            println!("{}", String::from_utf8_lossy(row));
-        }
-    }
-}
+// impl Piece {
+//     fn print(&self) {
+//         for i in 0..self.height {
+//             let start = i * self.width;
+//             let end = start + self.width;
+//             let row = &self.bytes[start..end];
+//             // println!("{:08b}", row.last().unwrap());
+//             println!("{}", String::from_utf8_lossy(row));
+//         }
+//     }
+// }
 
 fn hex_to_bytes(hex_str: &str) -> Vec<u8> {
     (0..hex_str.len())
@@ -129,7 +129,7 @@ fn parse_input(input: &str) -> Vec<Piece> {
 
     for piece_str in input.split("\n\n") {
         // Break bigger pieces into chunks of 8 lines (4 if solving example)
-        for (i, shard) in piece_str.lines().chunks(8).into_iter().enumerate() {
+        for (i, shard) in piece_str.lines().chunks(4).into_iter().enumerate() {
             let lines: Vec<&str> = shard.collect();
             let mut piece = parse_piece(&lines, &mut id);
 
@@ -248,11 +248,6 @@ fn fill_map<'a>(pieces: &'a Vec<Piece>, left_top: &'a Piece) -> Vec<Vec<Option<&
                         3 => UP,
                         _ => unreachable!(),
                     };
-
-                    if position.x == 0 && i == 2 {
-                        println!("{position}");
-                        current.print();
-                    }
 
                     let next = position + dir;
                     let piece_n = &pieces[*n];
