@@ -129,7 +129,7 @@ fn parse_input(input: &str) -> Vec<Piece> {
 
     for piece_str in input.split("\n\n") {
         // Break bigger pieces into chunks of 8 lines (4 if solving example)
-        for (i, shard) in piece_str.lines().chunks(4).into_iter().enumerate() {
+        for (i, shard) in piece_str.lines().chunks(8).into_iter().enumerate() {
             let lines: Vec<&str> = shard.collect();
             let mut piece = parse_piece(&lines, &mut id);
 
