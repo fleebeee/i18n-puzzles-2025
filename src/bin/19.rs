@@ -40,6 +40,8 @@ pub fn convert_to_utc(
         return Some(result);
     }
 
+    // eprint!("{}", String::from_utf8(date_output.stderr).ok()?);
+
     None
 }
 
@@ -75,10 +77,11 @@ pub fn part_one(input: &str) -> Option<String> {
                 }
                 None => {
                     // Some dates fail but fortunately we can still find the answer
-                    eprintln!(
-                        "Failed to convert date: {} for timezone: {} with version: {}",
-                        date_str, tz, tz_version
-                    );
+                    // I think the failing dates are from where clocks were moved
+                    // eprintln!(
+                    //     "Failed to convert date: {} to timezone: {} with version: {}\n",
+                    //     date_str, tz, tz_version
+                    // );
                 }
             }
         }
