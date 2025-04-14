@@ -30,8 +30,9 @@ Solutions for [i18n puzzles](https://i18n-puzzles.com/) in [Rust](https://www.ru
 | [Day 17](./src/bin/17.rs) | `974.4µs` | `-` |
 | [Day 18](./src/bin/18.rs) | `1.7ms` | `-` |
 | [Day 19](./src/bin/19.rs) | `26.4s` | `-` |
+| [Day 20](./src/bin/20.rs) | `6.1µs` | `-` |
 
-**Total: 77057.18ms**
+**Total: 77057.19ms**
 <!--- benchmarking table --->
 
 ---
