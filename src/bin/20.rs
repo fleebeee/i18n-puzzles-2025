@@ -131,8 +131,7 @@ fn extract_code_points_from_invalid_utf8(bytes: &[u8]) -> Vec<u32> {
                 }
 
                 let mut big_byte = handle_utf8_bytes(&bytes[i..i + l], l);
-                // I'm unsure of the following line (as well as its clone below)
-                big_byte |= (bytes[i] as u32) << ((l - 1) * 6);
+                big_byte |= ((bytes[i] & 0b11) as u32) << ((l - 1) * 6);
                 code_points.push(big_byte);
                 i += l;
             }
@@ -141,7 +140,7 @@ fn extract_code_points_from_invalid_utf8(bytes: &[u8]) -> Vec<u32> {
                 let l = 5;
 
                 let mut big_byte = handle_utf8_bytes(&bytes[i..i + l], l);
-                big_byte |= (bytes[i] as u32) << ((l - 1) * 6);
+                big_byte |= ((bytes[i] & 0b111) as u32) << ((l - 1) * 6);
                 code_points.push(big_byte);
                 i += l;
             }
@@ -187,12 +186,10 @@ pub fn part_one(input: &str) -> Option<String> {
     // Skip BOM
     let utf16_le_bytes = to_utf16_le(&unpacked[2..]);
 
-    let unpacked = unpack_utf16_le(&utf16_le_bytes);
-    let code_points = extract_code_points_from_invalid_utf8(&unpacked);
+    let invalid_utf8 = unpack_utf16_le(&utf16_le_bytes);
+    let code_points = extract_code_points_from_invalid_utf8(&invalid_utf8);
     let utf8_bytes = extract_utf8_bytes_from_code_points(&code_points);
 
-    // The answer garbles some letters, luckily it only garbles one digits
-    // of the answer so guessing it is feasible
     let answer = String::from_utf8_lossy(&utf8_bytes).to_string();
 
     Some(answer)
