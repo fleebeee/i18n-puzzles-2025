@@ -12,6 +12,7 @@ pub fn convert_to_utc(
     tz_version: &str,
 ) -> Option<String> {
     // This command uses gdate (date on Linux) to apply the requested zoneinfo to a date
+    // Use `build_tzdb.sh` to build the timezone files (probably run it in the project root)
     let cmd = format!(
         "TZ={project_root}/data/timezones/zoneinfo-{tz_version}/usr/share/zoneinfo/{tz} gdate -d \"{date_str}\" +\"%Y-%m-%dT%H:%M:%S%z\"",
     );
